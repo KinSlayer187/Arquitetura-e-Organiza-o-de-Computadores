@@ -1,0 +1,25 @@
+8051 Assembler           Version 1.00   02/27/125 22:26:20    Page 1
+C:\Temp\Primeiro.A51
+
+
+
+    1 0000              ; Primeiro programa
+    2 0000              ;
+    3 0000              ; João Ricardo de Lima Bonifácio
+    4 0000              ;
+    5 0000              ;jric.lima12@gmail.com
+    6 0000              ;
+    7 0000              ;fev - 2025
+    8 0000              
+    9 0000              
+   10 0000                      org     000h            ;onde começa o programa na memória
+   11 0000 743F                 mov     a, #03fh        ; 0011 1111 vai para o acumulador
+   12 0002 F5A0                 mov     p2, a           ; acendo dois leds da esquerda
+   13 0004               termina:
+   14 0004 80FE                 sjmp termina            ; termina o programa
+   15 0006                      end                     ; macro assembly -- terminou
+
+Defined Symbols:
+
+Defined Labels:
+  termina                                   000004  4

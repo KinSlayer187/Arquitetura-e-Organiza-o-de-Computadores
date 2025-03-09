@@ -1,0 +1,32 @@
+8051 Assembler           Version 1.00   02/27/125 22:45:30    Page 1
+C:\Temp\Segundo.A51
+
+
+
+    1 0000              ; Segundo programa
+    2 0000              ;
+    3 0000              ; João Ricardo de Lima Bonifácio
+    4 0000              ;
+    5 0000              ; jric.lima12@gmail.com
+    6 0000              ;
+    7 0000              ; fev - 2025
+    8 0000              
+    9 0000              
+   10 0000                      org     000h            ; onde começa o programa na memória
+   11 0000 743F                 mov     a, #03fh        ; 0011 1111 vai para o acumulador
+   12 0002 F5A0                 mov     p2, a           ; acendo dois leds da esquerda
+   13 0004              
+   14 0004               volta:
+   15 0004 20B303               jb      p3.3, termina    ; jump bit se p3.3 for=1 vai para termina
+   16 0007 23                   rl      a                ; gira o acumulador para esquerda
+   17 0008 F5A0                 mov     p2, a        
+   18 000A              
+   19 000A               termina:
+   20 000A 80F8                 sjmp volta              ; termina o programa
+   21 000C                      end                     ; macro assembly -- terminou
+
+Defined Symbols:
+
+Defined Labels:
+  termina                                   00000A  10
+  volta                                     000004  4
